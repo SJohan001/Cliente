@@ -1,0 +1,39 @@
+﻿@page "/recuperarCuenta"
+
+<h3>Recover Account</h3>
+
+<EditForm OnValidSubmit="RecoverAccount">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText @bind-Value="email" placeholder="E-mail" /><br />
+    <button type="button" @onclick="SendClicked">Send</button><br />
+    <div style="display: flex;">
+        <InputText @bind-Value="code" placeholder="Code" style="width: 70%;" /><br />
+        <button type="button" @onclick="VerifyClicked" style="width: 30%;">Verify</button><br />
+    </div>
+    <InputText @bind-Value="newPassword" placeholder="New Password" /><br />
+
+    <button type="submit">Accept</button>
+</EditForm>
+
+@code {
+    private string email;
+    private string code;
+    private string newPassword;
+
+    private void SendClicked()
+    {
+        // Correo de recuperación
+    }
+
+    private void VerifyClicked()
+    {
+        // Verificar código de recuperación
+    }
+
+    private void RecoverAccount()
+    {
+        // Recuperar cuenta
+    }
+}

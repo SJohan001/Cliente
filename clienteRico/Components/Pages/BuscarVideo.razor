@@ -1,0 +1,39 @@
+﻿@page "/buscarVideo"
+
+<h3>Buscar video</h3>
+
+<div>
+    <input @bind="searchTerm" placeholder="Buscar" />
+    <button @onclick="Buscar">Buscar</button>
+</div>
+
+@if (resultados != null)
+{
+    <ul>
+        @foreach (var resultado in resultados)
+        {
+            <li>@resultado</li>
+        }
+    </ul>
+}
+
+@code {
+    public string busqueda;
+    private string searchTerm;
+    private List<string> resultados;
+
+    private void Buscar()
+    {
+        resultados = new List<string>
+        {
+            "Resultado 1",
+            "Resultado 2",
+            "Resultado 3"
+        };
+    }
+}
+<h3>@busqueda</h3>
+
+@code {
+
+}

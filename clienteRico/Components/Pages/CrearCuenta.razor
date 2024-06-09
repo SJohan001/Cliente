@@ -1,0 +1,46 @@
+﻿@page "/crearCuenta"
+
+<div class="form-container">
+    <h3>Create Account</h3>
+    <form>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+
+        <label for="username">User Name:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            By creating an account you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+        </label>
+
+        <button type="submit" id="submit" disabled>Aceptar</button>
+    </form>
+</div>
+
+@code {
+    private string email;
+    private string name;
+    private string lastName;
+    private DateTime birthday;
+    private string username;
+    private string password;
+    private bool termsAgreed;
+
+    private void CreateAccount()
+    {
+        // Crear cuenta
+    }
+}
